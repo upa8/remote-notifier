@@ -78,11 +78,13 @@ app.get('/:id', function (req, res) {
   })();
 })
 
-var server = app.listen(80, function () {
+app.get('/test', function (req, res) {
+  	res.send('Working')
+})
 
-  var host = '192.168.56.1';
-  var port = server.address().port;
-  
-  console.log("Services available on- http://192.168.56.1:80/");
+
+var server = app.listen(5000, function () {
+
+	console.log('App started');
 
 })
